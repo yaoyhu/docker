@@ -1,0 +1,10 @@
+#! /bin/sh
+
+set -e
+set -x
+
+export DEBIAN_FRONTEND=noninteractive
+
+packages="sudo adduser fish curl ca-certificates openssl wget lv vim man-db whiptail net-tools unzip build-essential gdb cmake ninja-build valgrind git"
+
+apt-get install -y --no-install-recommends --auto-remove --purge ${packages}
