@@ -1,0 +1,8 @@
+*.pyc
+*.pyo
+*.zip
+*.tar.gz
+*.tar.bz2
+*.bin
+.tasks
+.DS_Store
