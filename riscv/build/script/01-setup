@@ -1,0 +1,13 @@
+#! /bin/sh
+
+set -e
+set -x
+
+export DEBIAN_FRONTEND=noninteractive
+
+packages="build-essential git autoconf automake autotools-dev curl python3 python3-pip python3-tomli 
+         libmpc-dev libmpfr-dev libgmp-dev gawk bison flex texinfo gperf libtool 
+         patchutils bc zlib1g-dev libexpat-dev qemu-system-riscv64 
+         ninja-build cmake libglib2.0-dev libslirp-dev fish"
+
+apt-get install -y --no-install-recommends --auto-remove --purge ${packages}
