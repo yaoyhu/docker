@@ -8,7 +8,8 @@ export DEBIAN_FRONTEND=noninteractive
 
 git clone https://github.com/riscv/riscv-gnu-toolchain
 cd riscv-gnu-toolchain
-./configure --prefix=/opt/riscv --enable-multilib
+./configure --prefix=/opt/riscv
 make linux
 
-echo 'export PATH=/opt/riscv/bin:$PATH' >>~/.bashrc
+cd ..
+rm -rf riscv-gnu-toolchain/
